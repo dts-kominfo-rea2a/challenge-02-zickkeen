@@ -25,10 +25,6 @@ function lakukanLooping(arrPegawai) {
   */
   let hasilLooping = [];
 
-  for (let i = 0; i < arrayObjectPegawai.length; i++) {
-    hasilLooping[i] = arrayObjectPegawai[i].namaDepan + " " + arrayObjectPegawai[i].namaBelakang;
-  }
-
   /*
     TODO 2: Buatlah sebuah variabel bernama "jumlahPria"
       yang berisi jumlah pria dari masing masing pegawai
@@ -42,6 +38,7 @@ function lakukanLooping(arrPegawai) {
   let jumlahWanita = null;
 
   arrayObjectPegawai.forEach((p) => {
+    hasilLooping.push(p.namaDepan + " " + p.namaBelakang);
     const gender = p.jenisKelamin;
     if (gender == "M") {
       jumlahPria++;
