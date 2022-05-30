@@ -37,16 +37,16 @@ function lakukanLooping(arrPegawai) {
   */
   let jumlahWanita = null;
 
-  arrayObjectPegawai.forEach((p) => {
-    hasilLooping.push(p.namaDepan + " " + p.namaBelakang);
-    const gender = p.jenisKelamin;
+  for (let i = 0; i < arrayObjectPegawai.length; i++) {
+    hasilLooping.push(arrayObjectPegawai[i].namaDepan + " " + arrayObjectPegawai[i].namaBelakang);
+    const gender = arrayObjectPegawai[i].jenisKelamin;
     if (gender == "M") {
       jumlahPria++;
     }
     if (gender == "F") {
       jumlahWanita++;
     }
-  });
+  };
 
   /*
     TODO 4: Buatlah sebuah variabel bernama "komentar"
